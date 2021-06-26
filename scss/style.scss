@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+$primary-orange: hsl(31, 77%, 52%);
+$primary-dark-cyan: hsl(184, 100%, 22%);
+$primary-very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$transparent: hsla(0, 0%, 0%, 0);
+$very-light-gray: hsl(0, 0%, 95%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $very-light-gray;
+}
+main {
+  width: 70%;
+  min-height: 500px;
+  display: flex;
+  border: $transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  overflow-x: hidden;
+
+  section {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 30px;
+    flex: 1 0 0;
+
+    h2 {
+      color: $very-light-gray;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 2.5rem;
+    }
+    p {
+      color: $transparent-white;
+      font-family: 'Lexend Deca', sans-serif;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: auto;
+    }
+
+    a {
+      width: 120px;
+      padding: 13px;
+      border: 3px solid $transparent-white;
+      border-radius: 25px;
+      background: $very-light-gray;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    a:hover {
+      color: $transparent-white;
+    }
+  }
+  .sedans {
+    background-color: $primary-orange;
+    a {
+      color: $primary-orange;
+    }
+    a:hover {
+      background-color: $primary-orange;
+    }
+  }
+  .suvs {
+    background-color: $primary-dark-cyan;
+    a {
+      color: $primary-dark-cyan;
+    }
+    a:hover {
+      background: $primary-dark-cyan;
+    }
+  }
+  .luxury {
+    background-color: $primary-very-dark-cyan;
+    a {
+      color: $primary-very-dark-cyan;
+    }
+    a:hover {
+      background: $primary-very-dark-cyan;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-flow: column;
+    section {
+      p {
+        margin-bottom: 20%;
+      }
+    }
+  }
+}
